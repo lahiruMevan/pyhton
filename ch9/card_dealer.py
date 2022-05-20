@@ -36,3 +36,22 @@ def create_deck():
             }
 
     return deck
+
+
+# The deal_cards function deals a specified number of cards
+# from the deck
+def deal_cards(deck, number):
+    hand_value = 0
+
+    if number > len(deck):
+        number = len(deck)
+
+    for count in range(number):
+        card, value = deck.popitem()
+        print(card)
+        hand_value += value
+
+    print('Value of this hand:', hand_value)
+
+
+main()
