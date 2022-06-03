@@ -40,3 +40,29 @@ class Car(Automobile):
 
     def get_doors(self):
         return self.__doors
+
+
+class Truck(Automobile):
+    def __init__(self, make, model, milage, price, drive_type):
+        Automobile.__init__(self, make, model, milage, price)
+
+        self.__drive_type = drive_type
+
+    def set_drive_type(self, drive_type):
+        self.__drive_type = drive_type
+
+    def get_drive_type(self):
+        return self.__drive_type
+
+
+class SUV(Automobile):
+    def __init__(self, make, model, milage, price, pass_cap):
+        Automobile.__init__(self, make, model, milage, price)
+
+        self.__pass_cap = pass_cap
+
+    def set_pass_cap(self, pass_cap):
+        self.__pass_cap = pass_cap
+
+    def get_pass_cap(self):
+        return self.__pass_cap
