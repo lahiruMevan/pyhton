@@ -34,3 +34,23 @@ class ProductionWorker(Employee):
 
     def get_shift(self):
         return self.__shiftNum
+
+
+class ShiftSupervisor(Employee):
+
+    def __init__(self, name, number, salary, bonus):
+        Employee.__init__(self, name, number)
+        self.__anualSalary = salary
+        self.__anualProdBonus = bonus
+
+    def set_anual_salary(self, salary):
+        self.__anualSalary = salary
+
+    def get_anual_salary(self):
+        return format(self.__anualSalary, ',.2f')
+
+    def set_anual_bonus(self, bonus):
+        self.__anualProdBonus = bonus
+
+    def get_anual_bonus(self):
+        return format(self.__anualProdBonus, ',.2f')
